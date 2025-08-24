@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: url-shortener-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CONNECTION_STRING
+        value: mongodb+srv://saadmohammedhan7:L09KJA3iQDo0UVwG@url.34sna5b.mongodb.net/test?retryWrites=true&w=majority&appName=url
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
